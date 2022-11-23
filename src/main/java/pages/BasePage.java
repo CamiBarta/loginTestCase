@@ -1,4 +1,4 @@
-package base;
+package pages;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -13,9 +13,14 @@ import java.util.Date;
 public class BasePage {
 
     public WebDriver driver;
+    public String url = "http://tutorialsninja.com/demo/index.php?route=account/login";
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public void goToUrl(){
+        driver.get(url);
     }
 
     public void takeScreenshot() throws IOException {
